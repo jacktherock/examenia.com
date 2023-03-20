@@ -1,0 +1,7 @@
+.home-img{
+    background-image: url('./img/wave2.png');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: contain;
+    height: 100vh;
+}
