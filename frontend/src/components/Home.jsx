@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from './Footer'
 
 const Home = () => {
   return (
@@ -8,8 +7,7 @@ const Home = () => {
       <h1 className='d-flex justify-content-center'>Examemia.com</h1>
 
     </div>
-    <Footer/>
-    </div>
+      </div>
   )
 }
 

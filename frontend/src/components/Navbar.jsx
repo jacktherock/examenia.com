@@ -2,20 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import AcademicsDropdown from './Dropdowns/AcademicsDropdown'
 import BookDropdown from './Dropdowns/BookDropdown';
-
-export function AddLibrary(urlOfTheLibrary) {
-    const script = document.createElement('script');
-    script.src = urlOfTheLibrary;
-    script.async = true;
-    document.body.appendChild(script);
-}
+import Logo1 from '../img/logo_icon.png'
+import Logo2 from '../img/logo_name.png'
 
 const Navbar = () => {
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-dark bg-body-tertiary" data-bs-theme="dark">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/">Examenia.com</Link>
+                    <Link className="navbar-brand" to="/">
+                        <img src={Logo1} alt="" width="35" height="32" className="d-inline-block align-text-top" />
+                        <img src={Logo2} alt="" width="250" height="30" className="d-inline-block align-text-top" />
+                    </Link>
+
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -26,17 +25,16 @@ const Navbar = () => {
                             </li>
 
                             <li className="nav-item dropdown">
-                                <Link className="nav-link dropdown-toggle" to="#" id="book-dropdown" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">Books</Link>
-
+                                <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Books
+                                </Link>
                                 <BookDropdown />
-
                             </li>
 
                             <li className="nav-item dropdown">
-                                <Link className="nav-link dropdown-toggle" to="#" id="academy-dropdown" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">Academics</Link>
-
+                                <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Academics
+                                </Link>
                                 <AcademicsDropdown />
                             </li>
 
@@ -58,7 +56,6 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-                {AddLibrary('../js/bootstrap-dropdown.js')}
 
             </nav>
         </>
